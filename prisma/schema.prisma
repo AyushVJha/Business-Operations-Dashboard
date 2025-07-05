@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Sale {
+  id        Int      @id @default(autoincrement())
+  date      DateTime
+  amount    Float
+  product   String
+  createdAt DateTime @default(now())
+}
+
+model Inventory {
+  id             Int      @id @default(autoincrement())
+  product        String
+  quantity       Int
+  lastUpdated    DateTime @default(now())
+}
+
+model Customer {
+  id             Int      @id @default(autoincrement())
+  name           String
+  email          String   @unique
+  active         Boolean  @default(true)
+  retentionRate  Float?
+  createdAt      DateTime @default(now())
+}
