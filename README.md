@@ -1,10 +1,10 @@
 # Real-Time Business Operations Dashboard
 
-A comprehensive business operations dashboard built with Next.js, TypeScript, Prisma, and PostgreSQL. This application provides real-time insights into sales, inventory, and customer data with interactive visualizations and automated reporting capabilities.
+A comprehensive business operations dashboard built with Next.js, TypeScript, Prisma, and MySQL. This application provides real-time insights into sales, inventory, and customer data with interactive visualizations and automated reporting capabilities.
 
 ## Features
 
-- **Real-time Data Integration**: Connect to PostgreSQL/MySQL databases using Prisma ORM
+- **Real-time Data Integration**: Connect to MySQL databases using Prisma ORM
 - **Interactive Dashboards**: Dynamic charts and visualizations using Recharts
 - **KPI Monitoring**: Track sales trends, inventory turnover, and customer retention
 - **Automated Reporting**: Real-time data refresh every 60 seconds
@@ -15,7 +15,7 @@ A comprehensive business operations dashboard built with Next.js, TypeScript, Pr
 
 - **Frontend**: Next.js 15, TypeScript, Tailwind CSS
 - **Backend**: Next.js API Routes, Prisma ORM
-- **Database**: MySQL (configurable for PostgreSQL)
+- **Database**: MySQL
 - **UI Components**: Shadcn/ui, Lucide Icons
 - **Charts**: Recharts
 - **Styling**: Tailwind CSS
@@ -30,8 +30,8 @@ A comprehensive business operations dashboard built with Next.js, TypeScript, Pr
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd business-dashboard
+   git clone https://github.com/AyushVJha/Business-Operations-Dashboard.git
+   cd Business-Operations-Dashboard
    ```
 
 2. **Install dependencies**
@@ -121,7 +121,7 @@ The application uses three main tables:
 └── package.json
 ```
 
-## Key Features Explained
+## Key Features
 
 ### Real-time Data Refresh
 The dashboard automatically refreshes data every 60 seconds and provides a manual refresh button for immediate updates.
@@ -142,43 +142,14 @@ The dashboard automatically refreshes data every 60 seconds and provides a manua
 
 ## Deployment
 
-### Vercel Deployment
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy automatically
-
-### Database Deployment
+### Production Deployment
 
 For production, consider using:
-- **Vercel Postgres**
-- **PlanetScale**
-- **Railway**
-- **Supabase**
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+- **PlanetScale** (MySQL)
+- **Railway** (MySQL)
+- **AWS RDS** (MySQL)
+- **Google Cloud SQL** (MySQL)
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support and questions, please open an issue in the GitHub repository.
-
-## Roadmap
-
-- [ ] Add user authentication
-- [ ] Implement role-based access control
-- [ ] Add export functionality for reports
-- [ ] Integration with external APIs (Stripe, Shopify, etc.)
-- [ ] Advanced filtering and search capabilities
-- [ ] Email notifications for alerts
-- [ ] Mobile app development
